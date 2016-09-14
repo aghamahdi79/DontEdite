@@ -40,7 +40,7 @@ if (isset($update->edited_message)){
     'chat_id'=>$id,
     'reply_to_message_id'=>$eid,
     'text'=>$text,
-    'parse_mode'=>'markdown'
+    'parse_mode'=>'html'
   ]);
   $file_o = __DIR__.'/users/'.$eid.'.json';
   file_put_contents($file_o,json_encode($update->edited_message->text));
