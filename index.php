@@ -55,11 +55,8 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'alireza_PT','url'=>'https://telegram.me/alireza_PT']
+          ['text'=>'Developer','url'=>'https://telegram.me/Developer_001']
         ],
-        [
-          ['text'=>'CreateBOT','url'=>'https://telegram.me/create_antispam_bot']
-        ]
       ]
     ])
   ]);
