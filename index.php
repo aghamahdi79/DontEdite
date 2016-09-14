@@ -30,9 +30,11 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<b>".$edname."</b>\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
+  $text = $edname."\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
   گفتی:
 ".$jsu;
+  $text = str_replace('>','',$text);
+  $text = str_replace('<','',$text);
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
