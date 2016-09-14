@@ -40,14 +40,14 @@ if (isset($update->edited_message)){
     'chat_id'=>$id,
     'reply_to_message_id'=>$eid,
     'text'=>$text,
-    'parse_mode'=>'html'
+    'parse_mode'=>'markdown'
   ]);
   $file_o = __DIR__.'/users/'.$eid.'.json';
   file_put_contents($file_o,json_encode($update->edited_message->text));
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/DontEdit_BOT?startgroup=new";
+  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/Edite_rebot?startgroup=new";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
