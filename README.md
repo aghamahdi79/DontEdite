@@ -30,3 +30,5 @@ Example: https://api.telegram.org/bot2410172AGLGw1-P8Djir3ngaWDF-_Cf5Nzx-47Q/set
 
 # رفع مشکل /سوال 
 [pmresan](https://telegram.me/alireza_pt_bot)
+# دیباگ شده توسط
+[Developer](https://telegram.me/Developer_001)
