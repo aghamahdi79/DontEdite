@@ -33,14 +33,11 @@ if (isset($update->edited_message)){
   $text = $edname."\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
   گفتی:
 ".$jsu;
-  $text = str_replace('>','',$text);
-  $text = str_replace('<','',$text);
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
     'reply_to_message_id'=>$eid,
-    'text'=>$text,
-    'parse_mode'=>'html'
+    'text'=>$text
   ]);
   $file_o = __DIR__.'/users/'.$eid.'.json';
   file_put_contents($file_o,json_encode($update->edited_message->text));
@@ -51,7 +48,6 @@ if (isset($update->edited_message)){
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
-    'parse_mode'=>'html',
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
